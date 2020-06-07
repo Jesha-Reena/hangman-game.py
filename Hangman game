@@ -64,7 +64,7 @@ print('Well',name ,'let me think of a word')
 def wait():
     for i in range(5):
         print('.', end = "")
-        sleep(.5)
+        sleep(.3)
     print()
     
 wait()
@@ -89,7 +89,7 @@ right = ['_'] * len(picked)
 wrong = []
 
 #Prints letters in right with _'s
-def add_letter():
+def right_letter():
     for i in right:
         print(i, ' ', end = "")
     print()
@@ -108,7 +108,7 @@ while True:
     if guess in picked:
         print("Let me check")
 
-        ###Handles letter that appear more than once
+        #Handles letter that appear more than once
         
         index = 0
         for i in picked:
@@ -117,7 +117,7 @@ while True:
             index = index + 1
 
         wait()
-        add_letter()
+        right_letter()
         wrong_letter()
         parts(len(wrong))
         
@@ -130,7 +130,7 @@ while True:
         else:
             print(guess, "is not in my word")
             wrong.append(guess)
-            add_letter()
+            right_letter()
             wrong_letter()
             parts(len(wrong))
             
@@ -140,7 +140,7 @@ while True:
         break
     
     if '_' not in right:
-        print("You guessed it!")
+        print("You guessed it! You won!")
         print("I picked", picked)
         break
     
