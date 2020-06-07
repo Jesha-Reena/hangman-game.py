@@ -44,7 +44,6 @@ def parts(x):
 
 from time import sleep
 import random
-from hangman_parts import parts
 
 #Prints a hangman picture
 print("Welcome to Hangman")
